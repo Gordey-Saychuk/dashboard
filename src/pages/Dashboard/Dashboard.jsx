@@ -6,33 +6,29 @@ import CarInfo from "../../components/CarInfo/CarInfo";
 function Dashboard() {
   return (
     <div className={styles.dashboards}>
+      <Header />
 
-    <Header />
-    <div className={styles.dashboard}>
+      <div className={styles.dashboard}>
+        <div className={styles.doubleSmall}>
+          <Module className="small" />
+          <Module className="small" />
+        </div>
 
-    <div className={styles.doubleSmall} >
-    <Module className="small" /> 
-    <Module className="small" />
-    </div>
-   
-      
-<Module className="large" />
+        <Module className="large" />
 
-<Module className="medium" />
-        <CarInfo className="long" ></CarInfo>
+        <Module className="medium" />
+        <CarInfo className="long" />
 
-<Module className="long" />
- 
+        <Module className="long" />
 
-{/* <Module className="long" /> */}
- 
-<Module className="seven" />  
+        {/* <Module className="long" /> */}
 
-<Module className="sevens" />     
- 
-<Module className="mediums" />  
+        <Module className="seven" />
 
-    </div>
+        <Module className="sevens" />
+
+        <Module className="mediums" />
+      </div>
     </div>
   );
 }

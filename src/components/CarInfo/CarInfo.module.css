@@ -1,6 +1,11 @@
-.car-info {
-  min-height: 200px;
- 
+.carInfo {
+  position: relative;
+}
+
+.downloadButtonWrapper {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 .module {
@@ -30,20 +35,29 @@
 }
 
 .carInfoList {
-  columns: 3;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
   padding: 0;
   list-style: none;
   counter-reset: list-counter;
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .carListItem {
   padding: 5px;
   display: flex;
   gap: 10px;
+  align-items: center;
   counter-increment: list-counter;
   font-size: 14px;
   break-inside: avoid;
+}
+
+.carListItem span {
+
 }
 
 .carListItem::before {
@@ -65,7 +79,7 @@
   }
 
   .carInfoList {
-    columns: 1;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .long {
